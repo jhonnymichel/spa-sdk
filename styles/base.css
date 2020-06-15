@@ -1,0 +1,18 @@
+body,
+html {
+  font-size: 16px;
+  @apply bg-gray-400 font-sans;
+}
+
+*: {
+  @apply outline-none;
+}
+
+button:focus-within,
+button:focus,
+button:active,
+input:focus-within,
+input:focus,
+input:active {
+  @apply outline-none shadow-outline;
+}

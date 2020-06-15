@@ -1,0 +1,30 @@
+@import 'tailwindcss/base';
+@import './base';
+
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'noty/lib/noty';
+@import './transitions';
+@import './noty';
+
+.top-middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.-transform-x-50 {
+  transform: translateX(-50%);
+}
+
+.transform-x-50 {
+  transform: translateX(50%);
+}
+
+.-transform-x-100 {
+  transform: translateX(-100%);
+}
+
+.transform-x-100 {
+  transform: translateX(1000%);
+}

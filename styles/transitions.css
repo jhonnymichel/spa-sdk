@@ -1,0 +1,83 @@
+.resource-state-enter {
+  opacity: 0.01;
+}
+
+.resource-state-enter-active {
+  opacity: 1;
+  transition: all 200ms;
+}
+
+.resource-state-exit {
+  opacity: 1;
+}
+
+.resource-state-exit-active {
+  opacity: 0.01;
+  transition: all 200ms;
+}
+
+.transition-next-enter {
+  opacity: 0.01;
+  transform: translateX(200px);
+}
+
+.transition-next-enter-active {
+  opacity: 1;
+  transition: all 200ms;
+  transform: translateX(0px);
+}
+
+.transition-next-exit {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.transition-next-exit-active {
+  opacity: 0.01;
+  transform: translateX(-200px);
+  transition: all 200ms;
+}
+
+.transition-prev-enter {
+  opacity: 0.01;
+  transform: translateX(-200px);
+}
+
+.transition-prev-enter-active {
+  opacity: 1;
+  transition: all 200ms;
+  transform: translateX(0px);
+}
+
+.transition-prev-exit {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.transition-prev-exit-active {
+  opacity: 0.01;
+  transform: translateX(200px);
+  transition: all 200ms;
+}
+
+.extra-fields-enter {
+  opacity: 0.01;
+  transform: translateY(200px);
+}
+
+.extra-fields-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 500ms;
+}
+
+.extra-fields-exit {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.extra-fields-exit-active {
+  opacity: 0.01;
+  transform: translateX(-200px);
+  transition: all 500ms;
+}
