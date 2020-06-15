@@ -9,6 +9,7 @@ const Index: NextPage = observer(() => {
 
   return (
     <div className="container py-container">
+      <h1>The counter</h1>
       <div className="w-full flex justify-center items-center space-x-4">
         <Button variant="lg" onClick={lower}>
           -

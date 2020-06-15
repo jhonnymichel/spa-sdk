@@ -10,6 +10,7 @@ const Todos: NextPage = observer(() => {
 
   return (
     <div className="container py-container">
+      <h1>Todo list</h1>
       <div className="w-full flex flex-col items-start space-y-4">
         <Button disabled={state === 'loading'} variant="md" onClick={todos.fetch}>
           Reload

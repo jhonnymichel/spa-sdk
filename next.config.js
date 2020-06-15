@@ -1,8 +1,7 @@
 const path = require('path')
-const withCSS = require('@zeit/next-css')
 
 module.exports = (phase) => {
-  return withCSS({
+  return {
     env: {
       TODO_API_URL: process.env.TODO_API_URL,
     },
@@ -41,5 +40,5 @@ module.exports = (phase) => {
 
       return config
     },
-  })
+  }
 }
