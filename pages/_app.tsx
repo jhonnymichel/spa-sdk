@@ -15,8 +15,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta
           name="description"
-          content="This is an example of a meta description.
-This will often show up in search results."
+          content="This is an example of a meta description. This will often show up in search results."
         />
         <title>SPA SDK</title>
       </Head>
