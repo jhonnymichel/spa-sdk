@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
     <>
       <Head>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
           content="This is an example of a meta description. This will often show up in search results."
