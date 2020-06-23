@@ -4,7 +4,7 @@ import { setupServer } from 'msw/node'
 import { resetStore, initializeStore } from 'store'
 import { render, screen, waitForElementToBeRemoved } from 'tests/utils'
 
-global.process.env.TODO_API_URL = '/todoapi'
+global.process.env.NEXT_PUBLIC_TODO_API_URL = '/todoapi'
 
 const server = setupServer(
   rest.get('/todoapi', (req, res, ctx) => {

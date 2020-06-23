@@ -2,9 +2,6 @@ const path = require('path')
 
 module.exports = (phase) => {
   return {
-    env: {
-      TODO_API_URL: process.env.TODO_API_URL,
-    },
     webpack: (config) => {
       config.module.rules.push({
         test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,

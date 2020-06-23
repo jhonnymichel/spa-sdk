@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
-    "dev": "env-cmd next",
-    "build": "env-cmd next build",
-    "start": "env-cmd next start"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@types/react-transition-group": "^4.2.4",

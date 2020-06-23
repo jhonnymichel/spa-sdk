@@ -17,7 +17,7 @@ class Todos {
     transition(list, 'load')
 
     try {
-      const { data } = await axios.get(process.env.TODO_API_URL)
+      const { data } = await axios.get(process.env.NEXT_PUBLIC_TODO_API_URL)
       list.data = data
       transition(list, 'finish')
     } catch (e) {
