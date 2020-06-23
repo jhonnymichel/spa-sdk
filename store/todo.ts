@@ -20,10 +20,13 @@ class Todos {
       const { data } = await axios.get(process.env.NEXT_PUBLIC_TODO_API_URL)
       list.data = data
       transition(list, 'finish')
-    } catch (e) {
+    } catch ({ message, response = null, data = null }) {
       transition(list, 'throw')
-      list.error = e
-      console.error(e)
+      list.error = {
+        message,
+        data,
+        response,
+      }
     }
   }
 

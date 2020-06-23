@@ -15,7 +15,7 @@ const baseConfig: Config<LoadingState, Action> = {
 
 export type Resource<TData> = {
   data: TData
-  error: (Error & { response?: { status: number } }) | null
+  error: { data: any; message: string; response: any } | null
   state: LoadingState
 }
 
