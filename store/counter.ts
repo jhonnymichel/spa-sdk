@@ -4,7 +4,6 @@ class Counter {
   @observable value = 0
 
   @action.bound raise(): void {
-    console.log(this.value)
     this.value++
   }
 
