@@ -1,6 +1,13 @@
 /* eslint-disable no-undef */
 module.exports = {
-  collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/*.d.ts', '!**/node_modules/**'],
+  collectCoverageFrom: [
+    '**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!./*.*',
+    '!coverage/**/*.*',
+    '!config/**/*.*',
+  ],
   setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.js'],
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   transform: {
