@@ -3,9 +3,18 @@ import { initializeStore } from 'store'
 import { AppProps } from 'next/app'
 import 'mobx-react/batchingForReactDom'
 import 'focus-visible'
-import 'styles/index.css'
 import Navbar from 'components/navbar'
 import Head from 'next/head'
+import Router from 'next/router'
+import NProgress from 'nprogress'
+import 'styles/index.css'
+
+Router.events.on('routeChangeStart', (url) => {
+  console.log(`Loading: ${url}`)
+  NProgress.start()
+})
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   const store = initializeStore(pageProps?.initialStoreState)

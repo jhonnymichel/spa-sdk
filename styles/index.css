@@ -5,6 +5,7 @@
 @import 'tailwindcss/utilities';
 
 @import '~noty/lib/noty.css';
+@import '~nprogress/nprogress.css';
 @import './transitions.css';
 @import './noty.css';
 
