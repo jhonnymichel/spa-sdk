@@ -4,6 +4,7 @@ import { GetStaticProps, GetServerSideProps } from 'next'
 import Counter from './counter'
 import Todos from './todo'
 import { observable } from 'mobx'
+import isServer from './is-server'
 
 let store
 
@@ -19,7 +20,6 @@ export type InitialStoreState = {
 }
 
 // Next 5 lines are also about server side/static rendering
-const isServer = typeof window === 'undefined'
 useStaticRendering(isServer)
 export type GetInitialStoreState = { initialStoreState: InitialStoreState }
 export type GetStaticStoreState = GetStaticProps<GetInitialStoreState>
