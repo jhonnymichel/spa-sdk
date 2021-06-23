@@ -2,29 +2,32 @@ const path = require('path')
 
 module.exports = (phase) => {
   return {
+    future: {
+      webpack5: true
+    },
     webpack: (config) => {
-      config.module.rules.push({
-        test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            include: ['node_modules'],
-            limit: 100000,
-            name: '[name].[ext]',
-          },
-        },
-      })
+      // config.module.rules.push({
+      //   test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       include: ['node_modules'],
+      //       limit: 100000,
+      //       name: '[name].[ext]',
+      //     },
+      //   },
+      // })
 
-      config.module.rules.forEach((rule) => {
-        if (rule.test !== undefined && rule.test.source.includes('|svg|')) {
-          rule.test = new RegExp(rule.test.source.replace('|svg|', '|'))
-        }
-      })
+      // config.module.rules.forEach((rule) => {
+      //   if (rule.test !== undefined && rule.test.source.includes('|svg|')) {
+      //     rule.test = new RegExp(rule.test.source.replace('|svg|', '|'))
+      //   }
+      // })
 
-      config.module.rules.push({
-        test: /\.svg$/,
-        use: ['@svgr/webpack'],
-      })
+      // config.module.rules.push({
+      //   test: /\.svg$/,
+      //   use: ['@svgr/webpack'],
+      // })
 
       config.resolve.alias = {
         ...config.resolve.alias,

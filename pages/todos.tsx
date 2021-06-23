@@ -9,22 +9,27 @@ const Todos: NextPage = observer(() => {
   const { state } = todos.list
 
   return (
-    <div className="container py-container">
-      <h1>Todo list</h1>
-      <div className="w-full flex flex-col items-start space-y-4">
+    <div className="max-w-2xl px-4 mx-auto py-container">
+      <h1 className="hidden lg:block">Todo list</h1>
+      <div className="flex flex-col items-start w-full space-y-4">
         <Button disabled={state === 'loading'} variant="md" onClick={todos.fetch}>
           Reload
         </Button>
         {state === 'loading' && <div>Loading todos</div>}
         {state === 'error' && (
-          <div className="w-full flex justify-center py-16">Error loading todos</div>
+          <div className="flex justify-center w-full py-16">Error loading todos</div>
         )}
-        {state === 'ok' &&
-          todos.list.data.map((todo) => (
-            <div key={todo.id} className="px-4 py-2 bg-white hover:shadow-lg w-full rounded-lg">
-              <p className="text-gray-700">{todo.title}</p>
-            </div>
-          ))}
+        {state === 'ok' && (
+          <div className="flex flex-wrap">
+            {todos.list.data.map((todo) => (
+              <div key={todo.id} className="w-6/12 p-1 md:w-4/12 lg:w-3/12 xl:w-2/12">
+                <div className="w-full h-40 px-4 py-2 bg-white rounded-lg hover:shadow-lg">
+                  <p className="text-gray-700">{todo.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )
